@@ -1,0 +1,9 @@
+services:
+  slidev:
+    restart: always
+    image: ghcr.io/shervinamd/slidev-docker:master
+    ports:
+      - 3030:3030
+    volumes:
+      - $PWD/slides.md:/slidev/slides.md
+      - ./public:/slidev/public
